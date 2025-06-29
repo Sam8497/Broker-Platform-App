@@ -4,6 +4,7 @@ import BottomNavigation from './BottomNavigation';
 import Holdings from './Holdings';
 import Orderbook from './Orderbook';
 import Positions from './Positions';
+import OrderPad from './OrderPad';
 
 const MainApp = () => {
   const { currentScreen } = useApp();
@@ -28,6 +29,7 @@ const MainApp = () => {
         {renderScreen()}
       </main>
       <BottomNavigation />
+      <OrderPad />
     </div>
   );
 };
