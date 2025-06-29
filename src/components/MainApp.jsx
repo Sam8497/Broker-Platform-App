@@ -1,16 +1,35 @@
-import React from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { useApp } from '../contexts/AppContext';
+import Header from './Header';
+import BottomNavigation from './BottomNavigation';
+import Holdings from './Holdings';
+import Orderbook from './Orderbook';
+import Positions from './Positions';
 
 const MainApp = () => {
+  const { currentScreen } = useApp();
 
-  const { logout } = useAuth();
+  const renderScreen = () => {
+    switch (currentScreen) {
+      case 'holdings':
+        return <Holdings />;
+      case 'orderbook':
+        return <Orderbook />;
+      case 'positions':
+        return <Positions />;
+      default:
+        return <Holdings />;
+    }
+  };
 
   return (
-    <div>
-      Main App
-      <button onClick={logout}>Logout</button>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="pt-0">
+        {renderScreen()}
+      </main>
+      <BottomNavigation />
     </div>
-  )
-}
+  );
+};
 
-export default MainApp
+export default MainApp;
