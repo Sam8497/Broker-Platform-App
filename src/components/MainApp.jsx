@@ -5,6 +5,7 @@ import Holdings from './Holdings';
 import Orderbook from './Orderbook';
 import Positions from './Positions';
 import OrderPad from './OrderPad';
+import FloatingActionButton from './FloatingActionButton';
 
 const MainApp = () => {
   const { currentScreen } = useApp();
@@ -30,6 +31,7 @@ const MainApp = () => {
       </main>
       <BottomNavigation />
       <OrderPad />
+      <FloatingActionButton />
     </div>
   );
 };
