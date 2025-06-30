@@ -4,7 +4,7 @@ A modern web-based trading platform built with React that provides brokers with 
 
 # Live Link
 
-https://
+https://broker-platform-iu65xnsai-sam8497s-projects.vercel.app/
 
 ## Features
 
